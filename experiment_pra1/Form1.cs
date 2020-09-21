@@ -15,21 +15,34 @@ namespace experiment_pra1
         public static UserControl1 ctr1;
         public static UserControl2 ctr2;
         public static UserControl3 ctr3;
-        
+        public static UserControl4 ctr4;
+        public static Label labelc;
+        public static Timer myTimer;
+      
+
         public Form1()
         {
+            labelc = new Label();
+          
             InitializeComponent();
-            ctr1 = new UserControl1();
             ctr2 = new UserControl2();
+            ctr1 = new UserControl1();
+            //ctr2 = new UserControl2();
             ctr3 = new UserControl3();
+            ctr4 = new UserControl4();
+
+            //labelc = new Label();
 
             panel1.Controls.Add(ctr1);
             panel1.Controls.Add(ctr2);
             panel1.Controls.Add(ctr3);
+            panel1.Controls.Add(ctr4);
 
             ctr1.Visible = true;
             ctr2.Visible = false;
             ctr3.Visible = false;
+            ctr4.Visible = false;
+
         }
 
         

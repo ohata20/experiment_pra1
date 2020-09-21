@@ -15,6 +15,23 @@ namespace experiment_pra1
         public UserControl3()
         {
             InitializeComponent();
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControl3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1.ctr3.Visible = false;
+            Form1.ctr4.Visible = true;
         }
     }
 }

@@ -13,15 +13,32 @@ namespace experiment_pra1
 {
     public partial class UserControl2 : UserControl
     {
+        // This integer variable keeps track of the 
+        // remaining time.
+        //int timeLeft=3;
         public UserControl2()
         {
             InitializeComponent();
+            axWindowsMediaPlayer1.Visible = false;
+            button1.Visible = true;
+
+
+          
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1.ctr1.Visible = true;
-            Form1.ctr2.Visible = false;
+            //Form1.ctr1.Visible = true;
+            axWindowsMediaPlayer1.Visible = true;
+            axWindowsMediaPlayer1.URL = @"C:\Users\MasakiOhata\Source\Repos\experiment_pra1\movie\3_M_057.mp4";
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+        public void player_start()
+        {
+            axWindowsMediaPlayer1.Visible = true;
+            axWindowsMediaPlayer1.URL = @"C:\Users\MasakiOhata\Source\Repos\experiment_pra1\movie\3_M_057.mp4";
+            axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
@@ -32,7 +49,7 @@ namespace experiment_pra1
             axWindowsMediaPlayer1.Ctlcontrols.play();
             ///MessageBox.Show("ssssss");
         }
-        static async void DelaySample(int j)
+        public async void DelaySample(int j)
         {
             for (int i = 0; i < 10; i++)
             {
@@ -59,16 +76,24 @@ namespace experiment_pra1
         {
             switch (e.newState)
             {
-                case 0:    // Undefined
+                case 0:    // Undefined aa
                     
                     break;
 
-                case 1:    // Stopped
+                case 1:    // Stopped 
                     Form1.ctr1.Visible = false;
                     Form1.ctr2.Visible = false;
                     Form1.ctr3.Visible = true;
+
                     break;
+
             }
             }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
