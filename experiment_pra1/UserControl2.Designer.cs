@@ -68,6 +68,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Trial 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // UserControl2
             // 
@@ -88,6 +89,6 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label2;
     }
 }

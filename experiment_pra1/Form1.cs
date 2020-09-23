@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,20 +18,28 @@ namespace experiment_pra1
         public static UserControl3 ctr3;
         public static UserControl4 ctr4;
         public static Label labelc;
-        public static Timer myTimer;
-      
+        //public static Timer myTimer;
+
+        public string _stimli_filepath = @"C:\Users\MasakiOhata\Source\Repos\experiment_pra1\movie";
+        public static int _trial;
+        public static int _trial_counter;
+
+     
 
         public Form1()
         {
+            string[] _file_names = Directory.GetFiles(_stimli_filepath, "*");
+            _trial = _file_names.Length;
+            _trial_counter = 1;
             labelc = new Label();
           
             InitializeComponent();
-            ctr2 = new UserControl2();
+            ctr2 = new UserControl2(_file_names);
             ctr1 = new UserControl1();
             //ctr2 = new UserControl2();
-            ctr3 = new UserControl3();
+            
             ctr4 = new UserControl4();
-
+            ctr3 = new UserControl3();
             //labelc = new Label();
 
             panel1.Controls.Add(ctr1);
@@ -42,6 +51,8 @@ namespace experiment_pra1
             ctr2.Visible = false;
             ctr3.Visible = false;
             ctr4.Visible = false;
+
+
 
         }
 

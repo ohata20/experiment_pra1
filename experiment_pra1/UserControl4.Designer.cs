@@ -37,7 +37,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(304, 121);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(790, 431);
+            this.label2.Size = new System.Drawing.Size(790, 137);
             this.label2.TabIndex = 2;
             this.label2.Text = "休憩（15秒）";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -67,7 +67,8 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label1;
     }
 }
