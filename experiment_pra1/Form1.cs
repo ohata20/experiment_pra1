@@ -21,6 +21,7 @@ namespace experiment_pra1
         //public static Timer myTimer;
 
         public string _stimli_filepath = @"C:\Users\MasakiOhata\Source\Repos\experiment_pra1\movie";
+        public static string _result_filepath = @"C:\Users\MasakiOhata\Source\Repos\experiment_pra1\result.csv";
         public static int _trial;
         public static int _trial_counter;
 
@@ -30,7 +31,7 @@ namespace experiment_pra1
         {
             string[] _file_names = Directory.GetFiles(_stimli_filepath, "*");
             _trial = _file_names.Length;
-            _trial_counter = 1;
+            _trial_counter = 1; //トライアルのカウント
             labelc = new Label();
           
             InitializeComponent();

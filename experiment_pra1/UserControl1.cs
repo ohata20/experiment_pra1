@@ -50,6 +50,7 @@ namespace experiment_pra1
                 myTimer.Stop();
                 Form1.ctr2.player_start();
                 _counter = _time_counter;
+                labelc.Text = _time_counter.ToString();
             }
 
         }

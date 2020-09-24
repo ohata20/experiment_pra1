@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -49,6 +50,7 @@ namespace experiment_pra1
                 Form1.ctr4.Visible = false;
                 Form1.ctr1.myTimer.Start();
                 _counter=_time_counter;
+                labelc.Text = _time_counter.ToString();
             }
 
         }
@@ -64,7 +66,49 @@ namespace experiment_pra1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //_counter = Form1._trial_counter.ToString();
+            int j = 0;
+            int k = 0;
+            object[] words = new object[2];
+            //myTimer.Start();
+            foreach (CheckBox ck1 in groupBox1.Controls)
+            {
+                if (ck1.Checked)
+                {
+                    j += 1; //多重チェックやノーチェックの監視用変数
+                    words[0] = ck1.Tag;
+                    ck1.Checked = false;
+                }
+            }
+            foreach (CheckBox ck1 in groupBox2.Controls)
+            {
+                if (ck1.Checked)
+                {
+                    k += 1; //多重チェックやノーチェックの監視用変数
+                    words[1] = ck1.Tag;
+                    ck1.Checked = false;
+                }
+            }
+            if (!(j == 1) ^ !(k==1))
+            {
+                MessageBox.Show("適切に選択されていません");
+                return;
+            }
+            //CSVfileへの書き込み
+            try
+            {
+                // ファイルを開く
+                StreamWriter file = new StreamWriter(Form1._result_filepath, true, Encoding.UTF8);
+                file.WriteLine(string.Format("{0},{1},{2}",Form1._trial_counter, words[0], words[1]));
+                file.Close();
+                Console.WriteLine("test.csvに書き込みました。");
+            }
+            catch (Exception r)
+            {
+                Console.WriteLine(r.Message); // 例外検出時にエラーメッセージを表示
+            }
+            MessageBox.Show("OK");
+
+            //次の画面への変遷、準備
             _re_count = Form1._trial - Form1._trial_counter;
             Form1.ctr4.label1.Text = "残り " + _re_count+" Trial";
             myTimer2.Start();
