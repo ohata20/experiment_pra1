@@ -34,10 +34,10 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(304, 121);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(634, 131);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(790, 137);
+            this.label2.Size = new System.Drawing.Size(1123, 400);
             this.label2.TabIndex = 2;
             this.label2.Text = "休憩（15秒）";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -45,10 +45,10 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(477, 506);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(672, 878);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(433, 248);
+            this.label1.Size = new System.Drawing.Size(988, 264);
             this.label1.TabIndex = 3;
             this.label1.Text = "残り 39 trial";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,7 +61,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Name = "UserControl4";
-            this.Size = new System.Drawing.Size(1384, 972);
+            this.Size = new System.Drawing.Size(1675, 1142);
             this.ResumeLayout(false);
 
         }

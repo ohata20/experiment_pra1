@@ -23,7 +23,6 @@ namespace experiment_pra1
             axWindowsMediaPlayer1.Visible = false;
             //axWindowsMediaPlayer1.settings.autoStart = false;
             //axWindowsMediaPlayer1.settings.setMode("loop", true);
-            button1.Visible = true;
             _movie_path=_path_lists;
 
           
@@ -54,20 +53,6 @@ namespace experiment_pra1
             //axWindowsMediaPlayer1.fullScreen = true;
             //axWindowsMediaPlayer1.Ctlcontrols.play();
             ///MessageBox.Show("ssssss");
-        }
-        public async void DelaySample(int j)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-
-                // 呼び出し元に処理復帰し、以降の処理は非同期で処理する
-                await Task.Delay(1000*j);
-
-                Console.WriteLine(DateTime.Now + ":i=" + i.ToString());
-            }
-            // Console.WriteLine(i);
-         
-            
         }
 
         private void Movie_Ended(object sender, AxWMPLib._WMPOCXEvents_EndOfStreamEvent e)

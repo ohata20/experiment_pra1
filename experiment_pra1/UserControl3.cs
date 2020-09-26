@@ -28,8 +28,8 @@ namespace experiment_pra1
             labelc.Text = _time_counter.ToString();
             _counter = _time_counter;
             //Form1.labelc.Left = 150;
-            labelc.Location = new Point(330, 250);
-            labelc.Font = new System.Drawing.Font("Times New Roman", 50);
+            labelc.Location = new Point(610, 400);
+            labelc.Font = new System.Drawing.Font("Times New Roman", 100);
             labelc.AutoSize = true;
             //Form1.labelc.TextAlign = ContentAlignment.MiddleCenter;
             Form1.ctr4.Controls.Add(labelc);
@@ -70,25 +70,25 @@ namespace experiment_pra1
             int k = 0;
             object[] words = new object[2];
             //myTimer.Start();
-            foreach (CheckBox ck1 in groupBox1.Controls)
+            foreach (RadioButton ck1 in groupBox1.Controls)
             {
                 if (ck1.Checked)
                 {
-                    j += 1; //多重チェックやノーチェックの監視用変数
+                    j = 1; //ノーチェックの監視用変数
                     words[0] = ck1.Tag;
                     ck1.Checked = false;
                 }
             }
-            foreach (CheckBox ck1 in groupBox2.Controls)
+            foreach (RadioButton ck1 in groupBox2.Controls)
             {
                 if (ck1.Checked)
                 {
-                    k += 1; //多重チェックやノーチェックの監視用変数
+                    k = 1; //ノーチェックの監視用変数
                     words[1] = ck1.Tag;
                     ck1.Checked = false;
                 }
             }
-            if (!(j == 1) ^ !(k==1))
+            if (!(j == 1) | !(k == 1))
             {
                 MessageBox.Show("適切に選択されていません");
                 return;
@@ -106,7 +106,7 @@ namespace experiment_pra1
             {
                 Console.WriteLine(r.Message); // 例外検出時にエラーメッセージを表示
             }
-            MessageBox.Show("OK");
+            //MessageBox.Show("OK");
 
             //次の画面への変遷、準備
             _re_count = Form1._trial - Form1._trial_counter;

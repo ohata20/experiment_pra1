@@ -31,8 +31,8 @@ namespace experiment_pra1
             myTimer.Stop();
             labelc.Text = _time_counter.ToString();
             //Form1.labelc.Left = 150;
-            labelc.Location = new Point(330, 250);
-            labelc.Font = new System.Drawing.Font("Times New Roman", 50);
+            labelc.Location = new Point(640, 400);
+            labelc.Font = new System.Drawing.Font("Times New Roman", 100);
             labelc.AutoSize = true;
             //Form1.labelc.TextAlign = ContentAlignment.MiddleCenter;
             Form1.ctr2.Controls.Add(labelc);

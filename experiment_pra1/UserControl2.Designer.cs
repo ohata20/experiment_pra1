@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl2));
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
-            this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
@@ -49,22 +48,12 @@
             this.axWindowsMediaPlayer1.EndOfStream += new AxWMPLib._WMPOCXEvents_EndOfStreamEventHandler(this.Movie_Ended);
             this.axWindowsMediaPlayer1.Enter += new System.EventHandler(this.axWindowsMediaPlayer1_Enter);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(479, 584);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(257, 143);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "動画再生";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(387, 76);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(904, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(433, 248);
+            this.label2.Size = new System.Drawing.Size(553, 280);
             this.label2.TabIndex = 3;
             this.label2.Text = "Trial 1";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -75,10 +64,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(1208, 854);
+            this.Size = new System.Drawing.Size(1489, 933);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
@@ -87,7 +75,6 @@
         #endregion
 
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
-        private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Timer timer1;
         public System.Windows.Forms.Label label2;
     }
